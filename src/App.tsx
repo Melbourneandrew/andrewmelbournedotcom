@@ -94,15 +94,18 @@ export default function App() {
       </div>
 
       {/* Filter and Search */}
-      <div className="w-full max-w-2xl px-6 flex flex-col mb-[5px]">
-        <button
-          onClick={() => setIsFilterVisible(!isFilterVisible)}
-          className="w-full text-left"
-        >
-          <span className="text-gray-600 text-lg">
-            Filter &equiv;
-          </span>
-        </button>
+      <div className="w-full max-w-2xl px-6 flex flex-col mb-[20px]">
+        <div className="flex flex-row items-center gap-2">
+          <div className="text-lg mr-auto">Projects</div>
+          <button
+            onClick={() => setIsFilterVisible(!isFilterVisible)}
+            className="text-left"
+          >
+            <span className="text-lg whitespace-nowrap px-2 py-1">
+              Filter &equiv;
+            </span>
+          </button>
+        </div>
 
         {isFilterVisible && (
           <div className="flex flex-col gap-4 mt-[5px] mb-[20px]">

@@ -23,7 +23,6 @@ export const projects: Project[] = [
       technologies.openai,
     ],
     githubUrl: "https://github.com/M3LBY/ai-chat-app",
-    imageUrl: "https://placehold.co/600x400",
     imageAlt: "AI Chat Application Screenshot",
   },
   {
