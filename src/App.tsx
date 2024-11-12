@@ -1,6 +1,10 @@
 import { useState } from "react";
 import ProjectTemplate from "./ProjectTemplate";
 import { projects } from "./projects";
+import GithubIcon from "./icons/github";
+import LinkedinIcon from "./icons/linkedin";
+import XIcon from "./icons/x";
+import DevpostIcon from "./icons/devpost";
 
 export default function App() {
   const [projectList, setProjectList] = useState(projects);
@@ -50,13 +54,43 @@ export default function App() {
   return (
     <div className="flex flex-col items-center mt-[30px] h-screen">
       {/* Header */}
-      <div className="text-4xl font-bold">Andrew Melbourne</div>
+      <div className="text-4xl font-bold mb-[5px]">
+        Andrew Melbourne
+      </div>
       {/* Links */}
       <div className="flex flex-row gap-4 mb-[30px]">
-        <a href={links.github}>Github</a>
-        <a href={links.linkedin}>LinkedIn</a>
-        <a href={links.twitter}>X/Twitter</a>
-        <a href={links.devpost}>Devpost</a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-row gap-1"
+          href={links.github}
+        >
+          <GithubIcon /> Github
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-row gap-1"
+          href={links.linkedin}
+        >
+          <LinkedinIcon /> LinkedIn
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-row gap-1"
+          href={links.twitter}
+        >
+          <XIcon /> Twitter
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-row gap-1"
+          href={links.devpost}
+        >
+          <DevpostIcon /> Devpost
+        </a>
       </div>
 
       {/* Filter and Search */}
@@ -101,12 +135,12 @@ export default function App() {
       {/* Projects */}
       <div className="flex flex-col gap-4">
         {filteredProjects.map((project, index) => (
-          <>
-            <ProjectTemplate key={index} {...project} />
+          <div key={index}>
+            <ProjectTemplate {...project} />
             {index < filteredProjects.length - 1 && (
               <div className="h-[1px] w-full bg-gray-200 mb-[10px]"></div>
             )}
-          </>
+          </div>
         ))}
       </div>
     </div>

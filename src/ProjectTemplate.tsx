@@ -2,10 +2,10 @@ export interface Project {
   title: string;
   description: string;
   technologies: string[];
-  githubUrl: string;
-  demoUrl: string;
-  imageUrl: string;
-  imageAlt: string;
+  githubUrl?: string;
+  demoUrl?: string;
+  imageUrl?: string;
+  imageAlt?: string;
 }
 
 export default function ProjectTemplate({
@@ -36,31 +36,39 @@ export default function ProjectTemplate({
         </div>
 
         {/* Links */}
-        <div className="flex gap-4">
-          <a
-            href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-900 transition-colors"
-          >
-            GitHub
-          </a>
-          <a
-            href={demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-900 transition-colors"
-          >
-            Live Demo
-          </a>
-        </div>
+        {(githubUrl || demoUrl) && (
+          <div className="flex gap-4">
+            {githubUrl && (
+              <a
+                href={githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                GitHub
+              </a>
+            )}
+            {demoUrl && (
+              <a
+                href={demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                Live Demo
+              </a>
+            )}
+          </div>
+        )}
 
         {/* Project Image */}
-        <img
-          src={imageUrl}
-          alt={imageAlt}
-          className="w-full h-48 object-cover rounded-md"
-        />
+        {imageUrl && (
+          <img
+            src={imageUrl}
+            alt={imageAlt || title}
+            className="w-full h-48 object-cover rounded-md"
+          />
+        )}
       </div>
     </div>
   );
