@@ -19,9 +19,71 @@ const technologies = {
 
 export const projects: Project[] = [
   {
+    title: "Banter",
+    description:
+      "Provide an OpenAI API Key and prompt a model tohave a lively debate with itself about a given topic.",
+    technologies: [technologies.nextjs, technologies.openai],
+    imageUrl:
+      "https://imagedelivery.net/tQa_QONPmkASFny9ZSDT4A/b5dd7f43-6029-4359-fd61-4530a0d04b00/public",
+    githubUrl: "https://github.com/Melbourneandrew/banter-ai",
+    demoUrl: "https://banter.melbournedev.com/",
+    date: "6/2024",
+  },
+  {
+    title: "Elly Bot",
+    description:
+      "Retrieval Augmented Generation chatbot that roleplays as the main character of the book 'Moral Code'. ",
+    technologies: [
+      technologies.react,
+      technologies.node,
+      technologies.openai,
+      "Pinecone DB",
+      technologies.rag,
+    ],
+    imageUrl:
+      "https://imagedelivery.net/tQa_QONPmkASFny9ZSDT4A/e01cc1af-954c-4624-f544-0321d03e2000/public",
+    githubUrl: "https://github.com/Melbourneandrew/elly-bot-3",
+    demoUrl: "https://elly.melbournedev.com/",
+    date: "4/2024",
+  },
+  {
+    title: "Moist Meter (HackUTA 2023)",
+    description:
+      "IoT solution to predict the likleyhood of mold growth by monitoring moisture levels in walls. The system provides real-time alerts and visual heat maps, helping property owners identify and address potential moisture issues before mold develops.",
+    technologies: [
+      technologies.react,
+      technologies.python,
+      technologies.node,
+      technologies.mqtt,
+    ],
+    imageUrl:
+      "https://imagedelivery.net/tQa_QONPmkASFny9ZSDT4A/0b6a760f-5f7a-4579-0b24-d3bdd572c000/public",
+    githubUrl: "https://github.com/jduhking/MoistMeter",
+    devpostUrl:
+      "https://devpost.com/software/moist-meter-nj04ti",
+    date: "10/2023",
+  },
+  {
+    title: "Moist Meter (HackUTA 2023)",
+    description:
+      "IoT solution to predict the likleyhood of mold growth by monitoring moisture levels in walls. The system provides real-time alerts and visual heat maps, helping property owners identify and address potential moisture issues before mold develops.",
+    technologies: [
+      technologies.react,
+      technologies.python,
+      technologies.node,
+      technologies.mqtt,
+    ],
+    imageUrl:
+      "https://imagedelivery.net/tQa_QONPmkASFny9ZSDT4A/0b6a760f-5f7a-4579-0b24-d3bdd572c000/public",
+    githubUrl: "https://github.com/jduhking/MoistMeter",
+    devpostUrl:
+      "https://devpost.com/software/moist-meter-nj04ti",
+    date: "10/2023",
+  },
+  {
     title: "TutorAI (RowdyHacks 2023)",
     description:
-      "Course-specific tutor using a vector index to reference course textbook whenever the user asks a question. Uses OpenAI embeddings and chat competitions to index the book and answer the questions. Won Best use of Google Cloud.",
+      "Course-specific tutor that uses a vector index to reference the course textbook whenever the user asks a question. Uses OpenAI embeddings and chat competitions to index textbooks and answer user questions. Won Best use of Google Cloud.",
     technologies: [
       technologies.react,
       technologies.python,
@@ -49,6 +111,21 @@ export const projects: Project[] = [
     imageUrl:
       "https://imagedelivery.net/tQa_QONPmkASFny9ZSDT4A/2851edd6-85b4-4bed-06a6-dbad098c4d00/public",
     date: "1/2023",
+  },
+  {
+    title: "Horizon (HackUTD IX)",
+    description:
+      "Portfolio optimization tool that analyzes an investor's stock, savings, and bond holdings to assess risk and recommend optimal asset allocation for maximizing annual expected return within a chosen risk tolerance, using key macroeconomic indicators like stock market trends, treasury bonds, inflation, and sector performance.",
+    technologies: [
+      technologies.vue,
+      technologies.golang,
+      "AlphaVantage API",
+    ],
+    imageUrl:
+      "https://imagedelivery.net/tQa_QONPmkASFny9ZSDT4A/ce70f85c-bea6-49e9-5f7c-9c1569e52800/public",
+    githubUrl: "https://github.com/Raajheer1/hackutd-ix",
+    devpostUrl: "https://devpost.com/software/horizon-c4h13j",
+    date: "11/2022",
   },
   {
     title: "Lets Park Here",
