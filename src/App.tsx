@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ProjectTemplate from "./ProjectTemplate";
-import { projects } from "./projects";
+import { projects, technologies } from "./projects";
 import GithubIcon from "./icons/github";
 import LinkedinIcon from "./icons/linkedin";
 import XIcon from "./icons/x";
@@ -14,9 +14,7 @@ export default function App() {
   );
 
   // Get unique technologies from all projects
-  const allTechnologies = Array.from(
-    new Set(projects.flatMap((project) => project.technologies))
-  ).sort();
+  const allTechnologies = Object.values(technologies);
 
   // Filter projects based on search term and selected technology
   const filteredProjects = projects.filter((project) => {
@@ -25,7 +23,7 @@ export default function App() {
       .includes(searchTerm.toLowerCase());
     const matchesTech =
       selectedTechs.length === 0 ||
-      selectedTechs.every((tech) =>
+      selectedTechs.some((tech) =>
         project.technologies.includes(tech)
       );
     return matchesSearch && matchesTech;
@@ -96,7 +94,9 @@ export default function App() {
       {/* Filter and Search */}
       <div className="w-full max-w-2xl px-6 flex flex-col mb-[20px]">
         <div className="flex flex-row items-center gap-2">
-          <div className="text-lg mr-auto">Projects</div>
+          <div className="text-2xl font-bold mr-auto">
+            Projects
+          </div>
           <button
             onClick={() => setIsFilterVisible(!isFilterVisible)}
             className="text-left"
@@ -108,10 +108,10 @@ export default function App() {
         </div>
 
         {isFilterVisible && (
-          <div className="flex flex-col gap-4 mt-[5px] mb-[20px]">
+          <div className="flex flex-col gap-4 mt-[10px] mb-[20px]">
             <input
               type="text"
-              placeholder="Search projects..."
+              placeholder=" Search projects..."
               className="w-full p-2 border rounded-md focus:outline-none focus:border-black"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -133,6 +133,8 @@ export default function App() {
             </div>
           </div>
         )}
+
+        <div className="h-[1px] w-full bg-gray-400"></div>
       </div>
 
       {/* Projects */}
