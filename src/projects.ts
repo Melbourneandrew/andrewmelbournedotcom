@@ -6,6 +6,7 @@ export const technologies = {
   vue: "Vue",
   golang: "Golang",
   mongodb: "MongoDB",
+  supabase: "Supabase",
   socketio: "Socket.io",
   openai: "OpenAI",
   anthropic: "Anthropic",
@@ -19,6 +20,32 @@ export const technologies = {
 };
 
 export const projects: Project[] = [
+  {
+    title: "Wallace ArXiv",
+    description:
+      "Built for Supabase x YC hackathon. Platform reccomends papers published on ArXiv based on user preferences. Users can chat with selected reccomendations. Users can also perform semantic search over papers in Wallace ArXiv corpus.",
+    technologies: [
+      technologies.vue,
+      technologies.supabase,
+      technologies.anthropic,
+      technologies.rag,
+    ],
+    imageUrl:
+      "https://imagedelivery.net/tQa_QONPmkASFny9ZSDT4A/69b18524-39fe-4fab-4135-37f8febcbf00/public",
+    githubUrl: "https://github.com/raajheer1/deckard",
+    date: "11/2024",
+  },
+  {
+    title: "Webgrid+",
+    description:
+      'Webgrid is a game developed by Neuralink to benchmark their brain-computer interface. Webgrid+ extends the game with a leaderboard and a 15 second "Blitz" mode.',
+    technologies: [technologies.vue, technologies.supabase],
+    imageUrl:
+      "https://imagedelivery.net/tQa_QONPmkASFny9ZSDT4A/8dba33da-db81-4683-898f-2ee0d91f1d00/public",
+    githubUrl: "https://github.com/Melbourneandrew/webgridplus",
+    demoUrl: "https://webgridplus.com/",
+    date: "11/2024",
+  },
   {
     title: "Banter",
     description:
