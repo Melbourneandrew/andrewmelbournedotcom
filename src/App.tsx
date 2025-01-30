@@ -5,6 +5,7 @@ import GithubIcon from "./icons/github";
 import LinkedinIcon from "./icons/linkedin";
 import XIcon from "./icons/x";
 import DevpostIcon from "./icons/devpost";
+import BlogIcon from "./icons/blog";
 
 export default function App() {
   const [projectList, setProjectList] = useState(projects);
@@ -44,6 +45,7 @@ export default function App() {
     twitter: "https://x.com/andrew_melby",
     devpost: "https://devpost.com/Melbourneandrew",
     huggingface: "https://huggingface.co/M3LBY",
+    blog: "https://blog.melbournedev.com",
   };
 
   // Add new state for filter visibility
@@ -89,6 +91,14 @@ export default function App() {
         >
           <DevpostIcon /> Devpost
         </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-row gap-1"
+          href={links.blog}
+        >
+          <BlogIcon /> Blog
+        </a>
       </div>
 
       {/* Filter and Search */}
@@ -121,11 +131,10 @@ export default function App() {
                 <button
                   key={tech}
                   onClick={() => toggleTech(tech)}
-                  className={`px-3 py-1 text-sm rounded-full transition-colors ${
-                    selectedTechs.includes(tech)
-                      ? "bg-gray-800 text-white"
-                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                  }`}
+                  className={`px-3 py-1 text-sm rounded-full transition-colors ${selectedTechs.includes(tech)
+                    ? "bg-gray-800 text-white"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                    }`}
                 >
                   {tech}
                 </button>

@@ -21,6 +21,15 @@ export const technologies = {
 
 export const projects: Project[] = [
   {
+    title: "Small Talk 😃",
+    description: "Small Talk lets you chat with small LLMs by loading them directly into your browser. Powered by transformers.js and webgpu. Defaults to a distilled version of DeepSeek R1. Other models are also available.",
+    technologies: [technologies.react, "HuggingFace Transformers", "DeepSeek R1"],
+    imageUrl: "https://imagedelivery.net/tQa_QONPmkASFny9ZSDT4A/c8f594a6-a714-46c5-2d34-eaffee089000/public",
+    githubUrl: "https://github.com/Melbourneandrew/smalltalk-web",
+    demoUrl: "https://smalltalk.melbournedev.com/",
+    date: "1/2025",
+  },
+  {
     title: "Wallace ArXiv",
     description:
       "Built for Supabase x YC hackathon. Platform reccomends papers published on ArXiv based on user preferences. Users can chat with selected reccomendations. Users can also perform semantic search over papers in Wallace ArXiv corpus.",
@@ -43,7 +52,7 @@ export const projects: Project[] = [
     imageUrl:
       "https://imagedelivery.net/tQa_QONPmkASFny9ZSDT4A/8dba33da-db81-4683-898f-2ee0d91f1d00/public",
     githubUrl: "https://github.com/Melbourneandrew/webgridplus",
-    demoUrl: "https://webgridplus.com/",
+    // demoUrl: "https://webgridplus.com/",
     date: "11/2024",
   },
   {
