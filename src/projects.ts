@@ -21,6 +21,13 @@ export const technologies = {
 
 export const projects: Project[] = [
   {
+    title: "StuffBot (Bracketbot Hackathon)",
+    description: "StuffBot is a robot that roams around your space and catalogues your stuff. Items are loaded into an inventory database and can be searched in the web interface. Guidace is provided by a LLM. Object detection is done with a YOLO model.",
+    technologies: ["YOLOv8", "Bracketbot", technologies.supabase, technologies.react],
+    imageUrl: "https://imagedelivery.net/tQa_QONPmkASFny9ZSDT4A/4349e0e1-7bb5-462d-fc87-3f2d6e2d5f00/public",
+    date: "2/2025",
+  },
+  {
     title: "Small Talk 😃",
     description: "Small Talk lets you chat with small LLMs by loading them directly into your browser. Powered by transformers.js and webgpu. Defaults to a distilled version of DeepSeek R1. Other models are also available.",
     technologies: [technologies.react, "HuggingFace Transformers", "DeepSeek R1"],

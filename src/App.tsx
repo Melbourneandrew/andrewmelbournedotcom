@@ -86,7 +86,7 @@ export default function App() {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-row gap-1"
+          className="hidden md:flex flex-row gap-1"
           href={links.devpost}
         >
           <DevpostIcon /> Devpost
