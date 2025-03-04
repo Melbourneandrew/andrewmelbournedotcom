@@ -3,9 +3,7 @@ export interface Project {
   description: string;
   technologies: string[];
   date?: string;
-  githubUrl?: string;
-  demoUrl?: string;
-  devpostUrl?: string;
+  links?: Record<string, string>;
   imageUrl?: string;
   imageAlt?: string;
 }
@@ -15,9 +13,7 @@ export default function ProjectTemplate({
   date,
   description,
   technologies,
-  githubUrl,
-  demoUrl,
-  devpostUrl,
+  links,
   imageUrl,
   imageAlt,
 }: Project) {
@@ -43,38 +39,19 @@ export default function ProjectTemplate({
         </div>
 
         {/* Links */}
-        {(githubUrl || demoUrl || devpostUrl) && (
+        {links && Object.keys(links).length > 0 && (
           <div className="flex gap-4">
-            {githubUrl && (
+            {Object.entries(links).map(([label, url]) => (
               <a
-                href={githubUrl}
+                key={label}
+                href={url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-gray-900 transition-colors"
               >
-                GitHub
+                {label}
               </a>
-            )}
-            {demoUrl && (
-              <a
-                href={demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                Live Demo
-              </a>
-            )}
-            {devpostUrl && (
-              <a
-                href={devpostUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                Devpost
-              </a>
-            )}
+            ))}
           </div>
         )}
 

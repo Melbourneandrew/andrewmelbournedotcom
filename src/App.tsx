@@ -6,6 +6,7 @@ import LinkedinIcon from "./icons/linkedin";
 import XIcon from "./icons/x";
 import DevpostIcon from "./icons/devpost";
 import BlogIcon from "./icons/blog";
+import HuggingFaceIcon from "./icons/huggingface";
 
 export default function App() {
   const [projectList, setProjectList] = useState(projects);
@@ -90,6 +91,14 @@ export default function App() {
           href={links.devpost}
         >
           <DevpostIcon /> Devpost
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:flex flex-row gap-1 no-underline"
+          href={links.huggingface}
+        >
+          <HuggingFaceIcon /> <span className="underline">Hugging Face</span>
         </a>
         <a
           target="_blank"
