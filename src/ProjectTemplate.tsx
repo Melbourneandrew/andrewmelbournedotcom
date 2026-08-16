@@ -18,7 +18,7 @@ export default function ProjectTemplate({
   imageAlt,
 }: Project) {
   return (
-    <div className="w-full max-w-2xl p-6 pt-0">
+    <div className="w-full max-w-2xl rounded-lg p-6 pt-4 transition-colors duration-200 hover:bg-gray-100">
       <div className="flex flex-col gap-2">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-semibold">{title}</h2>
