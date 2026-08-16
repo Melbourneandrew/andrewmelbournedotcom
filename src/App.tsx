@@ -98,7 +98,7 @@ export default function App() {
           className="hidden md:flex flex-row gap-1 no-underline"
           href={links.huggingface}
         >
-          <HuggingFaceIcon /> <span className="underline">Hugging Face</span>
+          <HuggingFaceIcon /> <span>Hugging Face</span>
         </a>
         <a
           target="_blank"
