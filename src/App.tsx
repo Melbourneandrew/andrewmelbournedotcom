@@ -43,7 +43,7 @@ export default function App() {
   const links = {
     github: "https://github.com/Melbourneandrew",
     linkedin: "https://www.linkedin.com/in/melbourneandrew/",
-    twitter: "https://x.com/andrew_melby",
+    twitter: "https://x.com/melbourneandrew",
     devpost: "https://devpost.com/Melbourneandrew",
     huggingface: "https://huggingface.co/M3LBY",
     blog: "https://blog.melbournedev.com",
@@ -53,13 +53,13 @@ export default function App() {
   const [isFilterVisible, setIsFilterVisible] = useState(false);
 
   return (
-    <div className="flex flex-col items-center mt-[30px] h-screen">
+    <div className="flex min-h-screen flex-col items-center px-4 pt-8">
       {/* Header */}
-      <div className="text-4xl font-bold mb-[5px]">
+      <div className="mb-2 text-4xl font-bold tracking-tight">
         Andrew Melbourne
       </div>
       {/* Links */}
-      <div className="flex flex-row gap-4 mb-[30px]">
+      <div className="mb-[30px] flex flex-row flex-wrap justify-center gap-4">
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -156,7 +156,7 @@ export default function App() {
       </div>
 
       {/* Projects */}
-      <div className="flex flex-col gap-4">
+      <div className="flex w-full max-w-2xl flex-col gap-4">
         {filteredProjects.map((project, index) => (
           <div key={index}>
             <ProjectTemplate {...project} />
